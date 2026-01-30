@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+:root {
+    --cor-primaria: #064153; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kalam", cursive;
+    color: white; 
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 30, 40, 1) 0%,    
+        rgba(0, 59, 77, 1) 12%,    
+        rgba(0, 93, 121, 1) 100%   
+    );
+}
+
+/* ===== HEADER ===== */
+
+.topo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    padding: 0 30px;
+    border-bottom: 4px solid var(--cor-primaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #007a99;
+    z-index: 10;
+}
+
+.titulo {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.logos {
+    position: absolute;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-conder {
+    height: 26px;
+}
+
+.logo-governo {
+    height: 60px;
+}
+
+/* ===== CONTEÚDO CENTRAL ===== */
+
+.container {
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+}
+
+/* ===== PERFIL ===== */
+
+.container-imagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    max-width: 700px;
+}
+
+.container-imagem h3 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.img {
+    background-image: url('./perfil.png');
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    border-radius: 50%;
+    border: 3px solid #33a6c4; 
+    animation: mudarCor 2s infinite;
+}
+
+/* ===== BOTÕES ===== */
+
+.container-botao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.botao {
+    width: 320px;
+    height: 35px;
+    border: 2px solid black; 
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+    background-color: #005d79;
+    box-shadow: 5px 4px 2px rgba(0,0,0,1); 
+    transition: all 0.2s ease;
+}
+
+.botao i {
+    position: absolute;
+    left: 20px;
+    font-size: 24px;
+}
+
+.botao span {
+    font-size: 20px;
+}
+
+.botao:hover {
+    background-color: black; 
+    transform: scale(0.97);
+}
+
+/* ===== FOOTER ===== */
+
+.rodape-fixo {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background: #003b4d; 
+    box-shadow: 0 -2px 111px rgba(0,0,0,4);
+}
+
+/* ===== ANIMAÇÕES ===== */
+
+@keyframes mudarCor {
+    0%   { border-color: #007a99; }
+    25%  { border-color: #33a6c4; }
+    50%  { border-color: #005d79; }
+    75%  { border-color: #33a6c4; }
+    100% { border-color: #005d79; }
+}
